@@ -17,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
+    UIImage *backArrowImage = [UIImage imageNamed:@"backarrow"];
+    UIImage *renderedImage = [backArrowImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [UINavigationBar appearance].backIndicatorImage = renderedImage;
+    [UINavigationBar appearance].backIndicatorTransitionMaskImage = renderedImage;
     
     [FIRApp configure];
     return YES;

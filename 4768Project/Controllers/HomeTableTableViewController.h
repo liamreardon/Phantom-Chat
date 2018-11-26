@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeTableTableViewController : UITableViewController
+@interface HomeTableTableViewController : UITableViewController {
+    
+    UIRefreshControl *refreshControl;
+}
+
 
 @end
 

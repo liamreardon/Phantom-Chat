@@ -7,7 +7,9 @@
 //
 
 #import "SignUpViewController.h"
+
 @import Firebase;
+@import QuartzCore;
 
 @interface SignUpViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
@@ -22,6 +24,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.submitButton.clipsToBounds = YES;
+    self.submitButton.layer.cornerRadius = self.submitButton.frame.size.height/2;
+    self.submitButton.layer.borderWidth = 2;
+    self.submitButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+
+    
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [[self view] endEditing:TRUE];
     
 }
 
@@ -71,36 +87,46 @@
                             FIRUserProfileChangeRequest *changeRequest = [[FIRAuth auth].currentUser profileChangeRequest];
                             changeRequest.displayName = username;
                             
-                            [changeRequest commitChangesWithCompletion:^(NSError * _Nullable error) {
-                                if (error)
-                                {
-                                    NSLog(@"error %@", error.localizedDescription);
-                                }
-                                else
-                                {
-                                    // profile updated
-                                }
-                            }];
-                            
                             self.ref = [[FIRDatabase database] reference];
                             
                             FIRDatabaseReference * usersRef = [[self.ref child:@"users"] child: authResult.user.uid];
                             
                             NSDictionary * userInfo = @{@"uid" : authResult.user.uid,
                                                         @"username" : username
-                                                       };
+                                                        };
                             
                             [usersRef setValue:userInfo];
-                        
+                            
+                            [changeRequest commitChangesWithCompletion:^(NSError * _Nullable error) {
+                                if (error)
+                                {
+                                    NSLog(@"error %@", error.localizedDescription);
+                                    
+                                }
+                                else
+                                {
+                                    [self performSegueWithIdentifier:@"successfulSignupSegue" sender:self];
+                                }
+                            }];
                         
                         }
                         else
                         {
-                            
+                            [self showAlertController: error.localizedDescription];
                         }
-                                 
-                        
+
                     }];
+    
+}
+
+-(void)showAlertController:(NSString *)errorMessage {
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Oops" message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alertController addAction:alertAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
     
 }
 

@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 @import Firebase;
+@import QuartzCore;
 
 @interface LoginViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
@@ -20,7 +21,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.loginButton.clipsToBounds = YES;
+    self.loginButton.layer.cornerRadius = self.loginButton.frame.size.height/2;
+    self.loginButton.layer.borderWidth = 2;
+    self.loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [[self view] endEditing:TRUE];
+    
 }
 
 - (IBAction)loginAction:(id)sender {
@@ -35,13 +47,26 @@
         if (error == nil)
         {
             NSLog(@"Successful login!");
+            [self performSegueWithIdentifier:@"successfulLoginSegue" sender:self];
         }
         else
         {
             NSLog(@"error %@", error.localizedDescription);
+            [self showAlertController];
         }
         
     }];
+}
+
+-(void)showAlertController {
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Oops" message:@"Invalid Credentials" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alertController addAction:alertAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
 }
 
 

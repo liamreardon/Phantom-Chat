@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CreateMessageViewController : UIViewController
+@interface CreateMessageViewController : UIViewController <UIImagePickerControllerDelegate>
+
+@property (strong, nonatomic) NSDictionary * recipientInfo;
+
 
 @end
 

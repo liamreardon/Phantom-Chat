@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PickRecipientTableViewController : UITableViewController
+@interface PickRecipientTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
