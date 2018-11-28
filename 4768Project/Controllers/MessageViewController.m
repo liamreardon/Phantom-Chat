@@ -32,6 +32,17 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    
+    [self.timer invalidate];
+    self.timer = nil;
+    
+}
+
+    
+
+
 -(void)timerFired {
     
     if(currSeconds > 0)
@@ -45,8 +56,9 @@
     }
     else if (currSeconds == 0)
     {
+        [self destructMessage];
         [self popToHomeViewController];
-        // destroy message
+        
     }
 }
 
@@ -94,9 +106,28 @@
 
 -(void)destructMessage {
     
-//    FIRUser * currentUser = [FIRAuth auth].currentUser;
-//    FIRDatabaseReference * ref = [[FIRDatabase database] reference];
-//    NSString * key = [[ref child:@"messages"] childByAutoId].key;
+    NSString * userID = [FIRAuth auth].currentUser.uid;
+    
+    FIRDatabaseReference * databaseRef = [[FIRDatabase database] reference];
+    
+    FIRDatabaseQuery * messagesQuery = [[[databaseRef child:@"messages"] child:userID] child:self.messageKey];
+    
+    FIRDatabaseReference * ref = messagesQuery.ref;
+    
+    [ref removeValueWithCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        
+        if (error != nil)
+        {
+            NSLog(@"error %@", error);
+        }
+        else
+        {
+            NSLog(@"ref %@", ref);
+            NSLog(@"message successfully destructed");
+        }
+    }];
+    
+
     
 }
 
