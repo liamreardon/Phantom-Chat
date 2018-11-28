@@ -9,6 +9,7 @@
 #import "CreateMessageViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "HomeTableTableViewController.h"
+#import "Lottie/Lottie.h"
 @import Firebase;
 @import QuartzCore;
 
@@ -38,6 +39,8 @@
     self.messageImageView.userInteractionEnabled = YES;
     
     [self.messageImageView addGestureRecognizer:tapPicture];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -217,19 +220,24 @@
 }
 
 -(void)showUploadingState {
-    [self.sendButton setTitle:@"" forState:UIControlStateNormal];
-    [self.activityIndicator startAnimating];
-    self.sendButton.userInteractionEnabled = NO;
-    self.messageImageView.userInteractionEnabled = NO;
-    self.messageTextField.userInteractionEnabled = NO;
+    
+    self.sendButton.hidden = YES;
+    self.messageImageView.hidden = YES;
+    self.messageTextField.hidden = YES;
+    
+    LOTAnimationView *animView = [LOTAnimationView animationNamed:@"transfer"];
+    animView.center = self.view.center;
+    animView.loopAnimation = true;
+    [self.view addSubview:animView];
+    [animView playWithCompletion:^(BOOL animationFinished) {
+        NSLog(@"Anim finished");
+    }];
 }
 
 -(void)finishUploadingState {
-    [self.sendButton setTitle:@"Send" forState:UIControlStateNormal];
-    [self.activityIndicator stopAnimating];
-    self.sendButton.userInteractionEnabled = YES;
-    self.messageImageView.userInteractionEnabled = YES;
-    self.messageTextField.userInteractionEnabled = YES;
+    self.messageImageView.hidden = NO;
+    self.messageTextField.hidden = NO;
+    self.sendButton.hidden = NO;
 }
 
 

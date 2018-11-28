@@ -24,6 +24,8 @@
     
     [self getRecipients];
     
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
 }
 
 -(void)getRecipients {

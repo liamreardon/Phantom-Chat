@@ -7,6 +7,7 @@
 //
 
 #import "SplashViewController.h"
+#import <Lottie/Lottie.h>
 @import QuartzCore;
 
 @interface SplashViewController ()
@@ -29,6 +30,14 @@
     self.loginButton.layer.cornerRadius = self.loginButton.frame.size.height/2;
     self.loginButton.layer.borderWidth = 2;
     self.loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    LOTAnimationView *animView = [LOTAnimationView animationNamed:@"spirit_geek"];
+    animView.center = CGPointMake(205, 310);
+    animView.loopAnimation = true;
+    [self.view addSubview:animView];
+    [animView playWithCompletion:^(BOOL animationFinished) {
+        NSLog(@"Anim finished");
+    }];
 }
 
 

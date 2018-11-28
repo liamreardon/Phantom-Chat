@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) NSMutableArray *messagesArray;
 @property (strong, nonatomic) NSMutableArray *keysArray;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *composeButton;
 
 
 
@@ -36,12 +38,17 @@
         [self.tableView addSubview:refreshControl];
     }
     
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.logoutButton.tintColor = [UIColor whiteColor];
+    self.composeButton.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationItem.titleView.tintColor = [UIColor whiteColor];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    NSString * userID = [FIRAuth auth].currentUser.displayName;
     self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.title = [NSString stringWithFormat:@"Welcome %@", userID];
 }
 - (IBAction)logoutAction:(id)sender {
     NSError *error;

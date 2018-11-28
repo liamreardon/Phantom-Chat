@@ -8,7 +8,10 @@
 
 #import "VerifySessionViewController.h"
 #import "HomeTableTableViewController.h"
+#import <Lottie/Lottie.h>
 @import Firebase;
+
+
 
 @interface VerifySessionViewController ()
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -19,9 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.activityIndicator startAnimating];
-    
+
     UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {

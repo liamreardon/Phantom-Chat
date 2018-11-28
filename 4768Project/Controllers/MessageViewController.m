@@ -30,6 +30,8 @@
     
     [self setupInterface];
     
+ 
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -39,8 +41,6 @@
     self.timer = nil;
     
 }
-
-    
 
 
 -(void)timerFired {
@@ -126,8 +126,6 @@
             NSLog(@"message successfully destructed");
         }
     }];
-    
-
     
 }
 

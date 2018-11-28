@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import <Lottie/Lottie.h>
 @import Firebase;
 @import QuartzCore;
 
@@ -26,7 +27,13 @@
     self.loginButton.layer.cornerRadius = self.loginButton.frame.size.height/2;
     self.loginButton.layer.borderWidth = 2;
     self.loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
+}
+
+- (void)goBack:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -51,6 +58,7 @@
         }
         else
         {
+            
             NSLog(@"error %@", error.localizedDescription);
             [self showAlertController];
         }
@@ -68,6 +76,9 @@
     [self presentViewController:alertController animated:YES completion:nil];
     
 }
+
+
+
 
 
 @end

@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
+        <array key="AirbnbCereal-Book.ttf">
+            <string>AirbnbCerealApp-Book</string>
         </array>
     </customFonts>
     <scenes>
@@ -24,11 +24,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkw-7A-ASm" userLabel="signupButton">
-                                <rect key="frame" x="50" y="474" width="275" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="50" y="481" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="21"/>
+                                <state key="normal" title="sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="signupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yfW-1U-P1R"/>
@@ -37,37 +37,30 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rif-zW-LE6" userLabel="loginButton">
                                 <rect key="frame" x="50" y="549" width="275" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="AqJ-KF-a9b"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="21"/>
+                                <state key="normal" title="login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WDv-pt-hNp"/>
                                     <segue destination="Lg5-lg-Wot" kind="show" id="WBY-fR-Am8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhantomChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeQ-C4-4E9">
-                                <rect key="frame" x="107" y="141" width="161" height="30.5"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phantom chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeQ-C4-4E9">
+                                <rect key="frame" x="94" y="141" width="187.5" height="38"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="29"/>
+                                <color key="textColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spirit-2308072_960_720" translatesAutoresizingMaskIntoConstraints="NO" id="fAI-Ut-Xs0">
-                                <rect key="frame" x="112.5" y="241.5" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="PuX-PD-nBH"/>
-                                    <constraint firstAttribute="height" constant="150" id="fLw-DN-BwU"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.6470588235294118" green="0.21568627450980393" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HeQ-C4-4E9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="1bF-BT-A93"/>
-                            <constraint firstItem="rif-zW-LE6" firstAttribute="top" secondItem="Nkw-7A-ASm" secondAttribute="bottom" constant="25" id="4Sj-KS-rXS"/>
+                            <constraint firstItem="rif-zW-LE6" firstAttribute="top" secondItem="Nkw-7A-ASm" secondAttribute="bottom" constant="18" id="4Sj-KS-rXS"/>
                             <constraint firstItem="Nkw-7A-ASm" firstAttribute="centerX" secondItem="rif-zW-LE6" secondAttribute="centerX" id="91d-md-ta9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rif-zW-LE6" secondAttribute="bottom" constant="68" id="BCO-QZ-1LI"/>
                             <constraint firstItem="HeQ-C4-4E9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Iju-H8-hNJ"/>
@@ -75,8 +68,6 @@
                             <constraint firstItem="Nkw-7A-ASm" firstAttribute="height" secondItem="rif-zW-LE6" secondAttribute="height" id="Tf7-uT-oJB"/>
                             <constraint firstItem="Nkw-7A-ASm" firstAttribute="width" secondItem="rif-zW-LE6" secondAttribute="width" id="cT5-VM-Cya"/>
                             <constraint firstItem="rif-zW-LE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="e05-fc-bbL"/>
-                            <constraint firstItem="fAI-Ut-Xs0" firstAttribute="centerX" secondItem="HeQ-C4-4E9" secondAttribute="centerX" id="fYJ-hi-IJr"/>
-                            <constraint firstItem="fAI-Ut-Xs0" firstAttribute="top" secondItem="HeQ-C4-4E9" secondAttribute="bottom" constant="70" id="hn9-ur-QYc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -130,21 +121,21 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="840-z5-eFS">
                                 <rect key="frame" x="50" y="362" width="275" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="KUJ-gW-7wm"/>
                                     <constraint firstAttribute="height" constant="50" id="Rdl-ov-R4M"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="21"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="submitButtonAction:" destination="v5k-fJ-6Pm" eventType="touchUpInside" id="j3M-Xl-ECw"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="840-z5-eFS" firstAttribute="top" secondItem="Auv-Sk-FY5" secondAttribute="bottom" constant="25" id="2AK-Un-EHn"/>
                             <constraint firstItem="LxF-Yi-hhm" firstAttribute="top" secondItem="ERF-ZN-3WP" secondAttribute="top" constant="73" id="5xH-Fz-m86"/>
@@ -176,7 +167,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1y1-Jl-cLl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="DmA-gW-GJi">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
@@ -207,6 +198,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="composeButton" destination="IwB-85-79V" id="q1z-PX-QND"/>
+                        <outlet property="logoutButton" destination="A0Y-xv-Q2q" id="RoP-ew-kiN"/>
                         <segue destination="bBd-RY-iel" kind="show" identifier="pushToViewMessage" id="LcI-rP-3HO"/>
                     </connections>
                 </tableViewController>
@@ -221,7 +214,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrl-Jt-ZtW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="recipientReuse" rowHeight="80" id="eL3-uS-Fty">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
@@ -237,7 +230,7 @@
                             <outlet property="delegate" destination="Qgu-v1-NxL" id="ntT-dO-k89"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pick a Recipient" id="hvb-eo-m7D"/>
+                    <navigationItem key="navigationItem" title="Pick a Recipient" leftItemsSupplementBackButton="YES" id="hvb-eo-m7D"/>
                     <connections>
                         <segue destination="Ozd-rF-3Al" kind="show" identifier="pushToMessageSegue" id="SaS-f8-Ik8"/>
                     </connections>
@@ -312,8 +305,8 @@
                                     <constraint firstAttribute="height" constant="50" id="8tE-Mw-DjH"/>
                                     <constraint firstAttribute="width" constant="275" id="RIP-qg-j2m"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Send">
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="21"/>
+                                <state key="normal" title="send">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -375,22 +368,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqx-YN-ttr">
-                                <rect key="frame" x="50" y="291" width="275" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="50" y="287" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="9Eo-kp-WQb"/>
                                     <constraint firstAttribute="height" constant="50" id="gFF-6B-fTn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AirbnbCerealApp-Book" family="Airbnb Cereal App" pointSize="21"/>
+                                <state key="normal" title="login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="Lg5-lg-Wot" eventType="touchUpInside" id="Glj-je-suh"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9F-vw-FOL">
-                                <rect key="frame" x="87.5" y="141" width="200" height="50"/>
+                                <rect key="frame" x="87.5" y="137" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IcO-87-7Xp"/>
                                     <constraint firstAttribute="width" constant="200" id="j2a-ir-tWo"/>
@@ -400,18 +393,18 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-ZD-mpu">
-                                <rect key="frame" x="87.5" y="216" width="200" height="50"/>
+                                <rect key="frame" x="87.5" y="212" width="200" height="50"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lcg-ZD-mpu" firstAttribute="centerX" secondItem="A9F-vw-FOL" secondAttribute="centerX" id="6bG-6J-8mw"/>
                             <constraint firstItem="vqx-YN-ttr" firstAttribute="centerX" secondItem="lcg-ZD-mpu" secondAttribute="centerX" id="C4K-xF-Zj4"/>
                             <constraint firstItem="lcg-ZD-mpu" firstAttribute="top" secondItem="A9F-vw-FOL" secondAttribute="bottom" constant="25" id="LJk-ZL-E4r"/>
-                            <constraint firstItem="A9F-vw-FOL" firstAttribute="top" secondItem="bsg-dk-2Vb" secondAttribute="top" constant="77" id="QZz-wJ-KTo"/>
+                            <constraint firstItem="A9F-vw-FOL" firstAttribute="top" secondItem="bsg-dk-2Vb" secondAttribute="top" constant="73" id="QZz-wJ-KTo"/>
                             <constraint firstItem="vqx-YN-ttr" firstAttribute="top" secondItem="lcg-ZD-mpu" secondAttribute="bottom" constant="25" id="X7K-Cg-7YQ"/>
                             <constraint firstItem="A9F-vw-FOL" firstAttribute="centerX" secondItem="bsg-dk-2Vb" secondAttribute="centerX" id="cfO-1I-pmx"/>
                             <constraint firstItem="lcg-ZD-mpu" firstAttribute="width" secondItem="A9F-vw-FOL" secondAttribute="width" id="kix-l1-Voz"/>
@@ -435,9 +428,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9VE-HI-Qmo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="backarrow_1151715" backIndicatorTransitionMaskImage="backarrow_1151715" id="7vC-og-fpY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7vC-og-fpY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.64705882349999999" green="0.2156862745" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -489,11 +486,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backarrow_1151715" width="491.51998901367188" height="491.51998901367188"/>
         <image name="insert_pattern_691409" width="491.51998901367188" height="491.51998901367188"/>
         <image name="spirit-2308072_960_720" width="593" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="G6u-2g-K40"/>
+        <segue reference="5Dg-Ha-yvK"/>
     </inferredMetricsTieBreakers>
 </document>
