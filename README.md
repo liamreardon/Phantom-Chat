@@ -1,3 +1,3 @@
 # Phantom-Chat
 
-Snapchat Clone built using Objective-C and Firebase.
+Picture messaging app built using Objective-C and Firebase.
